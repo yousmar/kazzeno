@@ -1,0 +1,9 @@
+zenokaz-gui/node_modules/*
+zenokaz-gui/node/*
+zenokaz-gui/target/*
+zenokaz-gui/src/main/*
+zenokaz-server/src/main/resources/static
+zenokaz-server/src/main/resources/static/*
+zenokaz-server/target/*
+target/*
+*.log
