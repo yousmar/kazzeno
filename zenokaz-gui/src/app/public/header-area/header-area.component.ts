@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import Typed from 'typed.js';
 import * as $ from 'jquery';
 import 'magnific-popup';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { TokenStorageService } from 'src/app/auth/token-storage.service';
 
 
 @Component({
@@ -12,13 +14,20 @@ import 'magnific-popup';
 })
 export class HeaderAreaComponent implements OnInit {
 
+  showRegistration = true;
 
-  constructor() {
+  emailFormControl: FormControl = new FormControl(null, [Validators.required, Validators.pattern('^[A-Za-z]+[A-Za-z0-9._]+[@][A-Za-z]+[.]{1}[A-Za-z]{2,5}$')]);
 
+  constructor(private tokenService: TokenStorageService) {
   }
 
 
   ngOnInit() {
+    let registration = this.tokenService.getRegistration();
+
+    if (registration != null) {
+      this.showRegistration = false;
+    }
     var typed = new Typed('#typed', {
       strings: [
         "Ne vous faites plus rouler <i class='fas fa-exclamation ml-2'></i>",
@@ -35,7 +44,6 @@ export class HeaderAreaComponent implements OnInit {
     });
 
     $('.popup-youtube').magnificPopup({
-      disableOn: 700,
       type: 'iframe',
       mainClass: 'mfp-fade',
       removalDelay: 160,
@@ -55,7 +63,12 @@ export class HeaderAreaComponent implements OnInit {
         }
       }
     });
+  }
 
+  register() {
+    this.tokenService.saveRegistration();
+    this.showRegistration = false;
+    //TODO : save to DB
 
   }
 

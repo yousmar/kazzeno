@@ -5,6 +5,7 @@ import { EmbedVideo } from 'ngx-embed-video';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PublicModule } from './public/public.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PublicModule } from './public/public.module';
     AppRoutingModule,
     HttpClientModule,
     PublicModule,
-    EmbedVideo.forRoot()
+    EmbedVideo.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
