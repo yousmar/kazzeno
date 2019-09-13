@@ -69,4 +69,5 @@
 		$(this).blur();
 	});
 
+
 })(jQuery);

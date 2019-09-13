@@ -10,6 +10,7 @@ export class ServiceAreaComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

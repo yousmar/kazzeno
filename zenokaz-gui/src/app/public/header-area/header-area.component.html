@@ -14,7 +14,7 @@
                   <mat-label>Votre email</mat-label>
                   <input type="email" matInput placeholder="Votre email" [formControl]="emailFormControl">
                   <mat-icon matSuffix>email</mat-icon>
-                  <mat-hint style="color: green">Béneficier de -40% de réduction sur votre 1er garagiste</mat-hint>
+                  <mat-hint style="color: green">Béneficier de -25% de réduction sur votre 1er garagiste</mat-hint>
                   <mat-error *ngIf="emailFormControl.hasError('required')">
                     <i class="fas fa-info-circle mr-2"></i>Email <strong>obligatoire</strong>
                   </mat-error>
@@ -31,7 +31,7 @@
               </div>
             </div>
             <div *ngIf="!showRegistration" class="mt-4">
-              <h6 style="color:green">Bravo, votre réduction de -40% a bien été enregistrée chez Zenokaz ! On reviendra vers vous une fois la plateforme lancée.  </h6>
+              <h6 style="color:green">Bravo, votre réduction de -25% a bien été enregistrée chez Zenokaz ! On reviendra vers vous une fois notre plateforme lancée.  </h6>
             </div>
 
           </div> <!-- header content -->
