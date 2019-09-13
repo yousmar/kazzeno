@@ -28,6 +28,7 @@ export class HeaderAreaComponent implements OnInit {
     if (registration != null) {
       this.showRegistration = false;
     }
+    
     var typed = new Typed('#typed', {
       strings: [
         "Ne vous faites plus rouler <i class='fas fa-exclamation ml-2'></i>",
