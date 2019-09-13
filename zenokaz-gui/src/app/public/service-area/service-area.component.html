@@ -193,12 +193,11 @@
         <div class="row justify-content-end">
             <div class="col-lg-6">
                 <div class="call-action-content text-center">
-                    <h2 class="call-title">Curious to Learn More? Stay Tuned</h2>
-                    <p class="text">You let us know whenever you want us to update anything or think something can be
-                        optimised.</p>
+                    <h2 class="call-title">Faites-vous accompagner !</h2>
+                    <p class="text">Enregistrez-vous à notre newsletter et recevez des profils de garagistes à proximité de vous.</p>
                     <div class="call-newsletter">
                         <i class="lni-envelope"></i>
-                        <input type="text" placeholder="alice@gmail.com" [formControl]="emailFormControl">
+                        <input type="text" placeholder="Adresse mail" [formControl]="emailFormControl">
                         <button (click)="register()" type="submit">SUBSCRIBE</button>
                     </div>
                     <span *ngIf="message">{{message}}</span>
